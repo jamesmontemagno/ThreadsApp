@@ -143,11 +143,11 @@ public partial class HomePage : ContentPage
 					{
 						new Label()
 						.Text(FontAwesomeIcons.Heart)
-						.Font("FAS")
+						.Font("FAR")
 						.FontSize(iconSize),
 						new Label()
 						.Text(FontAwesomeIcons.Comment)
-						.Font("FAS")
+						.Font("FAR")
 						.FontSize(iconSize),
 						new Label()
 						.Text(FontAwesomeIcons.Retweet)
@@ -155,7 +155,7 @@ public partial class HomePage : ContentPage
 						.FontSize(iconSize),
 						new Label()
 						.Text(FontAwesomeIcons.PaperPlane)
-						.Font("FAS")
+						.Font("FAR")
 						.FontSize(iconSize)
 					}.Row(2).Column(1),
 					new HorizontalStackLayoutSpaced

@@ -39,7 +39,7 @@
 
         <Tab>
             <Tab.Icon>
-                <FontImageSource FontFamily="FAS"
+                <FontImageSource FontFamily="FAR"
                                 Color="{AppThemeBinding 
                                     Dark=White, 
                                     Light={StaticResource SystemGray5Dark}}"
@@ -52,7 +52,7 @@
 
         <Tab>
             <Tab.Icon>
-                <FontImageSource FontFamily="FAS"
+                <FontImageSource FontFamily="FAR"
                                 Color="{AppThemeBinding 
                                     Dark=White, 
                                     Light={StaticResource SystemGray5Dark}}"
@@ -67,7 +67,7 @@
 
         <Tab>
             <Tab.Icon>
-                <FontImageSource FontFamily="FAS"
+                <FontImageSource FontFamily="FAR"
                                 Color="{AppThemeBinding 
                                     Dark=White, 
                                     Light={StaticResource SystemGray5Dark}}"
