@@ -13,7 +13,8 @@ public partial class HomePage : ContentPage
 			HasUnevenRows = true,
 			ItemTemplate = new DataTemplate(typeof(ThreadCell)),
 			IsPullToRefreshEnabled = true,
-			
+			SelectionMode = ListViewSelectionMode.None,	
+			SeparatorVisibility = SeparatorVisibility.None,		
 			ItemsSource = new[]
 			{
 				new AThread
@@ -30,6 +31,27 @@ public partial class HomePage : ContentPage
 					Message = "Hi, I am .NET Bot! I am here to help you with your .NET related questions. I will respond to commands that start with a dot (\".\"). To see what I can do type .help. I will only respond once per thread.",
 					IsVerified = true, Likes = 10, Replies = 2, TimeAgo = "2h"
 				},
+				new AThread
+				{
+					User = "jamesmontemagno",
+					Image = "profilecircle.png",
+					Message = "This is a thread message that you should read",
+					IsVerified = false, Likes = 10, Replies = 2, TimeAgo = "2h"
+				},
+				new AThread
+				{
+					User = "dotnet.developers",
+					Image = "profilecircle.png",
+					Message = "Hi, I am .NET Bot! I am here to help you with your .NET related questions. I will respond to commands that start with a dot (\".\"). To see what I can do type .help. I will only respond once per thread.",
+					IsVerified = true, Likes = 10, Replies = 2, TimeAgo = "2h"
+				},
+				new AThread
+				{
+					User = "dotnet.developers",
+					Image = "profilecircle.png",
+					Message = "Hi, I am .NET Bot! I am here to help you with your .NET related questions. I will respond to commands that start with a dot (\".\"). To see what I can do type .help. I will only respond once per thread.",
+					IsVerified = true, Likes = 10, Replies = 2, TimeAgo = "2h"
+				}
 			 }
 		};
 
@@ -69,6 +91,7 @@ public partial class HomePage : ContentPage
 
 	public class ThreadCell : ViewCell
 	{
+		const int iconSize = 20;
 		public ThreadCell()
 		{
             View = new Grid
@@ -77,7 +100,7 @@ public partial class HomePage : ContentPage
 				ColumnDefinitions = Columns.Define(Auto, Star, Auto, Auto),
 				ColumnSpacing = 10,
 				RowSpacing = 5,
-				RowDefinitions = Rows.Define(Auto, Star, Auto, Auto),
+				RowDefinitions = Rows.Define(Auto, Auto, Auto, Auto),
 				Children =
 				{
 					
@@ -121,19 +144,19 @@ public partial class HomePage : ContentPage
 						new Label()
 						.Text(FontAwesomeIcons.Heart)
 						.Font("FAS")
-						.FontSize(15),
+						.FontSize(iconSize),
 						new Label()
 						.Text(FontAwesomeIcons.Comment)
 						.Font("FAS")
-						.FontSize(15),
+						.FontSize(iconSize),
 						new Label()
 						.Text(FontAwesomeIcons.Retweet)
 						.Font("FAS")
-						.FontSize(15),
+						.FontSize(iconSize),
 						new Label()
 						.Text(FontAwesomeIcons.PaperPlane)
 						.Font("FAS")
-						.FontSize(15)
+						.FontSize(iconSize)
 					}.Row(2).Column(1),
 					new HorizontalStackLayoutSpaced
 					{
@@ -147,7 +170,7 @@ public partial class HomePage : ContentPage
 							.CenterVertical(),
 					}.Row(3).Column(1).ColumnSpan(3),
 
-					
+
 				}
 			};
 		}
